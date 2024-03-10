@@ -24,14 +24,14 @@ namespace MvcMovie.Controllers
         {
             if (_context.Movie == null)
             {
-                return Problem("Entity set 'MvcMovieContext.Movie' is null.");
+                return Problem("Entity set 'MvcMovieContext.Movie'  is null.");
             }
 
-            //Use LINQ TO GET LIST OF GENRES.
+            // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
                                             orderby m.Genre
                                             select m.Genre;
-
+            
             var movies = from m in _context.Movie
                          select m;
 
@@ -45,15 +45,13 @@ namespace MvcMovie.Controllers
                 movies = movies.Where(x => x.Genre == movieGenre);
             }
 
-            var moviewGenreVM = new MovieGenreViewModel
+            var movieGenreVM = new MovieGenreViewModel
             {
                 Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
                 Movies = await movies.ToListAsync()
             };
 
-            return View(moviewGenreVM);
-           //eturn View(await movies.ToListAsync());
-           //return View(await _context.Movie.ToListAsync());
+            return View(movieGenreVM);
         }
 
         [HttpPost]

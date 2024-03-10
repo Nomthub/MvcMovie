@@ -1,4 +1,4 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using MvcMovie.Data;
 using System;
@@ -33,7 +33,7 @@ public static class SeedData
                     Title = "Ghostbusters ",
                     ReleaseDate = DateTime.Parse("1984-3-13"),
                     Genre = "Comedy",
-                    Rating = "R",
+                    Rating = "PG-13",
                     Price = 8.99M
                 },
                 new Movie
@@ -41,7 +41,7 @@ public static class SeedData
                     Title = "Ghostbusters 2",
                     ReleaseDate = DateTime.Parse("1986-2-23"),
                     Genre = "Comedy",
-                    Rating = "R",
+                    Rating = "PG-13",
                     Price = 9.99M
                 },
                 new Movie
@@ -49,7 +49,7 @@ public static class SeedData
                     Title = "Rio Bravo",
                     ReleaseDate = DateTime.Parse("1959-4-15"),
                     Genre = "Western",
-                    Rating = "PG13",
+                    Rating = "PG-16",
                     Price = 3.99M
                 }
             );

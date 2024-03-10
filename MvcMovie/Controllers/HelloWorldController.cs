@@ -19,9 +19,9 @@ public class HelloWorldController : Controller
         return View();
     }
 
-    /*public string Welcome(string name, int id = 1)
+    /*public string Welcome(string name, int ID = 1)
     {
-        return HtmlEncoder.Default.Encode($"Hello {name} , ID: {id}");
+        return HtmlEncoder.Default.Encode($"Hello {name} , ID: {ID}");
     }
      * 
      * public string Welcome(string name, int numTimes = 1)
